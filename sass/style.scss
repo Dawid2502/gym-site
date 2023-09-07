@@ -1,0 +1,750 @@
+@import './_colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Phudu', cursive;
+	background: linear-gradient(
+		69deg,
+		rgba(0, 0, 0, 0.8) 0%,
+		rgba(59, 59, 64, 0.8) 51%,
+		rgba(0, 0, 0, 0.8) 100%
+	);
+}
+
+.wrapper {
+	margin: auto 0;
+	max-width: 120rem;
+}
+
+.active-menu {
+	display: flex;
+}
+
+.burger-btn {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	color: white;
+	background: none;
+	border: none;
+	cursor: pointer;
+	z-index: 10;
+	.fa-bars {
+		padding: 1rem;
+		font-size: 3.6rem;
+	}
+}
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(10px);
+	z-index: 9;
+	.gym-name {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-left: 2rem;
+		color: white;
+		img {
+			width: 8rem;
+			height: 8rem;
+			overflow: hidden;
+		}
+		p {
+			padding: 1rem 2rem;
+			font-size: 3.4rem;
+			text-transform: uppercase;
+		}
+	}
+	.nav-items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		.item {
+			padding: 1.5rem;
+			color: white;
+			font-size: 2.4rem;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: box-shadow 1s;
+			transform: translateX(60rem);
+			animation: menu-animation 2s forwards;
+		}
+		.item:nth-child(1) {
+			animation-delay: 0.4s;
+		}
+		.item:nth-child(2) {
+			animation-delay: 0.6s;
+		}
+		.item:nth-child(3) {
+			animation-delay: 0.8s;
+		}
+		.item:nth-child(4) {
+			animation-delay: 1s;
+		}
+		.item:nth-child(5) {
+			animation-delay: 1.2s;
+		}
+		.item:nth-child(6) {
+			animation-delay: 1.4s;
+		}
+		@keyframes menu-animation {
+			from {
+				transform: translateX(60rem);
+			}
+			to {
+				transform: translateX(0);
+			}
+		}
+	}
+}
+header {
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	color: white;
+	background-image: url(../image/humphrey-muleba-dDp-6pXrYik-1920.jpg);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	z-index: 0;
+	.header-text {
+		h1 {
+			font-size: 5rem;
+			text-transform: uppercase;
+		}
+		p {
+			font-size: 3.2rem;
+		}
+		h1,
+		p {
+			padding-top: 3rem;
+			padding-left: 4rem;
+			font-weight: bold;
+		}
+		span {
+			color: $words-color;
+		}
+	}
+	img {
+		height: 40rem;
+	}
+}
+
+header::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	content: '';
+	z-index: -1;
+}
+
+main {
+	.title-shape {
+		width: 180px;
+		height: 80px;
+		transform: skew(-20deg);
+		background: #555;
+		z-index: 2;
+		.section-title {
+			padding: 3rem 0;
+			font-size: 2.8rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	section {
+		margin-top: 5rem;
+	}
+	.about-us {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+		background: $background-section;
+		.about-us-body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 5rem;
+			img {
+				height: 44rem;
+			}
+			.section-description {
+				height: 600px;
+				color: white;
+				p {
+					padding: 0.5rem;
+					font-size: 1.2rem;
+				}
+				.about-us-items {
+					display: flex;
+					justify-content: center;
+					align-items: center; 
+					flex-direction: column;
+					flex-wrap: wrap;
+					.item-box {
+						margin: .5rem 1rem;
+						width: 15.5rem;
+						text-align: center;
+						i {
+							padding: 1rem;
+							color: $words-color;
+							font-size: 2.8rem;
+						}
+						p {
+							font-size: 1.4rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.gym-services {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background-image: url(../image/humphrey-muleba-dDp-6pXrYik-1920.jpg);
+		background-size: cover;
+		.services-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			margin: 5rem 0;
+			.service-body {
+				position: relative;
+				width: 38rem;
+				height: 28rem;
+				margin: 2rem;
+				overflow: hidden;
+				cursor: pointer;
+				z-index: 2;
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					transition: transform 3s;
+					z-index: 1;
+				}
+				.service-text {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 50%;
+					height: 100%;
+					background-color: rgba(206, 205, 205, 0.6);
+					text-align: center;
+					h3 {
+						padding: 1.5rem;
+						font-size: 2.2rem;
+						text-transform: uppercase;
+					}
+					p {
+						padding: 0 2rem;
+						font-size: 1.6rem;
+					}
+				}
+				.service-title {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					background: #c5c4c4;
+					z-index: 2;
+					p {
+						padding: 1rem 1.5rem;
+						font-size: 1.6rem;
+						font-weight: bold;
+						text-transform: uppercase;
+					}
+				}
+				img:hover {
+					transform: translateX(50%);
+				}
+			}
+		}
+	}
+	.gym-services::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .8);
+		content: '';
+		z-index: 1;
+	}
+	.price-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: $background-section;
+		.gym-tickets-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			margin: 5rem 0;
+			color: white;
+			.ticket-body {
+				margin: 1.5rem 2rem;
+				width: 30rem;
+				box-shadow: 1rem 1rem 2rem rgb(77, 77, 77);
+				border-radius: 1.5rem;
+				.ticket-title {
+					background: #555;
+					border-top-left-radius: 1.5rem;
+					border-top-right-radius: 1.5rem;
+					text-align: center;
+					h3 {
+						padding: 0.5rem;
+						font-size: 1.8rem;
+						font-weight: bold;
+						text-transform: uppercase;
+					}
+					p {
+						padding: 1rem 2rem;
+						font-size: 1.6rem;
+						span {
+							color:$words-color;
+							text-transform: uppercase;
+						}
+					}
+				}
+				.ticket-info {
+					text-align: center;
+					.ticket-price {
+						padding: 2rem;
+						color: $words-color;
+						font-size: 5.2rem;
+						font-weight: bold;
+					}
+					ul {
+						text-align: left;
+						li {
+							padding: 1rem;
+							font-size: 1.4rem;
+							list-style: inside;
+						}
+					}
+					.price-btn {
+						margin: 2rem;
+						padding: 1rem 2rem;
+						border: none;
+						border-radius: 1rem;
+						transition: scale .5s;
+						cursor: pointer;
+					}
+					.price-btn:hover {
+						transform: scale(1.07);
+					}
+				}
+			}
+		}
+	}
+	.our-team {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-image: url(../image/samuel-girven-fqMu99l8sqo-2400.jpg);
+		background-position: center;
+		background-size: cover;
+		z-index: 0;
+		.team-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			margin: 3rem;
+			max-width: 140rem;
+			.team-person-body {
+				margin: 2rem;
+				img {
+					position: relative;
+					top: 5rem;
+					left: 50%;
+					width: 14rem;
+					height: 14rem;
+					border-radius: 50%;
+					object-fit: cover;
+					animation: pulse-shadow 5s infinite;
+				}
+				.person-description {
+					width: 30rem;
+					background: white;
+					background: rgb(218, 218, 222);
+					background: linear-gradient(
+						72deg,
+						rgba(218, 218, 222, 1) 0%,
+						rgba(165, 165, 166, 1) 28%,
+						rgb(206, 206, 207) 100%
+					);
+					border-radius: 1.5rem;
+					p {
+						padding-left: 2rem;
+						padding-bottom: 2rem;
+						font-size: 1.4rem;
+					}
+					.person-name {
+						padding: 2rem;
+						font-size: 1.6rem;
+						font-weight: bold;
+					}
+				}
+			}
+			@keyframes pulse-shadow {
+				0% {
+					box-shadow: 0 0 0 white;
+				}
+				60% {
+					box-shadow: 0 0 5rem white;
+				}
+				100% {
+					box-shadow: 0 0 0 white;
+				}
+			}
+		}
+	}
+	.our-team::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.45);
+		content: '';
+		z-index: -1;
+	}
+	.contact {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+		background: $background-section;
+		z-index: 0;
+		.contact-body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: 5rem 0;
+			.contact-info {
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				width: 100%;
+				color: white;
+				text-align: center;
+				.info {
+					margin: 1.2rem .5rem;
+					h4 {
+						color: $words-color;
+						font-size: 1.4rem;
+					}
+					p {
+						font-size: 1.2rem;
+					}
+				}
+			}
+			form {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				.contact-data {
+					input {
+						margin: 1rem 2rem;
+						padding: 1rem 2rem;
+						width: 92%;
+					}
+				}
+				textarea {
+					margin: 2rem;
+					padding: 1rem 2rem;
+					height: 22rem;
+					width: 92%;
+				}
+				.form-btn {
+					margin: 1rem 2rem;
+					padding: 1rem 2rem;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	margin-top: 10px;
+	background: rgb(44, 43, 43);
+	p {
+		margin: 0;
+		padding: 1.5rem;
+		color: white;
+		text-align: center;
+		font-size: 1.4rem;
+	}
+}
+
+@media (min-width: 576px) {
+	header {
+		img {
+			height: 48rem;
+		}
+	}
+	main {
+		.about-us {
+			.about-us-body {
+				.section-description {
+					.about-us-items {
+						.item-box {
+							i {
+								font-size: 3.6rem;
+							}
+							p {
+								font-size: 1.6rem;
+							}
+						}
+					}
+				}
+			}
+		}
+		.contact {
+			.contact-body {
+				.contact-info {
+					.info {
+						h4 {
+							font-size: 1.6rem;
+						}
+						p {
+							font-size: 1.4rem;
+						}
+						h4,
+						p {
+							letter-spacing: 2px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.burger-btn {
+		display: none;
+	}
+	nav {
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		height: 8rem;
+		.gym-name {
+			flex-direction: row;
+		}
+		.nav-items {
+			flex-direction: row;
+			.item {
+				font-size: 1.8rem;
+				transform: translateX(0);
+				transition: box-shadow 1s;
+				animation: none;
+			}
+			.item:hover {
+				box-shadow: 0 0 1rem #535353;
+			}
+		}
+	}
+	header {
+		justify-content: center;
+		flex-direction: row;
+		.header-text {
+			h1 {
+				font-size: 5.0rem;
+			}
+			p {
+				padding-top: 3rem;
+				font-size: 3.2rem;
+			}
+		}
+		img {
+			height: 72rem;
+		}
+	}
+	main {
+		.about-us {
+			.about-us-body {
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				width: 100%;
+				img {
+					height: 70rem;
+				}
+				.section-description {
+					// height: 700px;
+					margin-top: 3rem;
+					margin-bottom: 3rem;
+					width: 62rem;
+					p {
+						padding: 2rem 1rem;
+						font-size: 1.5rem;
+						line-height: 2rem;
+					}
+					.about-us-items {
+						flex-direction: row;
+						.item-box {
+							margin: 1rem;
+							width: 15.5rem;
+							text-align: center;
+							i {
+								padding: 1rem;
+								font-size: 4.8rem;
+							}
+							p {
+								font-size: 1.6rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.gym-services {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			.services-container {
+				.service-body {
+					width: 40rem;
+					height: 30rem;
+					margin: 2rem;
+				}
+			}
+		}
+
+		.contact {
+			.contact-body {
+				align-items: start;
+				flex-direction: row;
+				.contact-info {
+					align-items: start;
+					flex-direction: column;
+					width: 20%;
+					.info {
+						h4 {
+							font-size: 1.8rem;
+						}
+						p {
+							font-size: 1.6rem;
+						}
+						h4,
+						p {
+							letter-spacing: 1px;
+						}
+					}
+				}
+				form {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					.contact-data {
+						input {
+							margin: 1rem 2rem;
+							padding: 1rem 2rem;
+							width: 92%;
+						}
+					}
+					textarea {
+						margin: 2rem;
+						padding: 1rem 2rem;
+						height: 30rem;
+						width: 92%;
+					}
+					.form-btn {
+						margin: 1rem 2rem;
+						padding: 1rem 2rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		.nav-items {
+			.item {
+				font-size: 2.2rem;
+			}
+		}
+	}
+	main {
+		.about-us {
+			.about-us-body {
+				.section-description {
+					p {
+						font-size: 1.6rem;
+					}
+					.about-us-items {
+						.item-box {
+							margin: 2rem;
+							i {
+								font-size: 5.2rem;
+							}
+							p {
+								font-size: 1.8rem;
+							}
+						}
+					}
+				}
+			}
+		}
+		.contact {
+			.contact-body {
+				form {
+					margin-left: 5rem;
+				}
+			}
+		}
+	}
+}
