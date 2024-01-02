@@ -4,9 +4,10 @@
 
 * [Description](#description)
 * [Technologies](#technologies)
-* [Parts](#Parts)
+* [Parts](#parts)
 * [Parts of project](#parts-of-project)
 * [Goals on future](#goals-on-future)
+* [Photo's source](#photo-source)
 * [Live](#live)
 
 ## Description
@@ -61,6 +62,11 @@ The contact section consists of a contact form. Currently, it is not possible to
 ## Goals on future
 
 Add a login panel and a shopping cart. Add a possibility to send email
+
+## Photo source
+https://pixabay.com/
+
+https://unsplash.com/
 
 ## Live
 https://verdant-blancmange-ec065d.netlify.app/
