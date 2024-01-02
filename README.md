@@ -63,4 +63,4 @@ The contact section consists of a contact form. Currently, it is not possible to
 Add a login panel and a shopping cart. Add a possibility to send email
 
 ## Live
-[https://shiny-dragon-33b8f0.netlify.app/](https://verdant-blancmange-ec065d.netlify.app/)https://verdant-blancmange-ec065d.netlify.app/
+https://verdant-blancmange-ec065d.netlify.app/
